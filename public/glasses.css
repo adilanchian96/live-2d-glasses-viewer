@@ -27,7 +27,6 @@ body {
   height: 600px !important;
 }
 
-/* Visible on waveguide while loading / on error */
 .glasses-status {
   position: fixed;
   top: 12px;

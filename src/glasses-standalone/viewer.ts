@@ -28,7 +28,8 @@ function hideStatus(): void {
   document.getElementById("glasses-status")?.classList.add("glasses-status--hidden");
 }
 
-function waitForCubismCore(timeoutMs = 20000): Promise<void> {
+/** glasses-boot.js loads Cubism before this module; brief wait for edge cases. */
+function waitForCubismCore(timeoutMs = 5000): Promise<void> {
   return new Promise((resolve, reject) => {
     if (window.Live2DCubismCore) {
       resolve();
@@ -44,7 +45,7 @@ function waitForCubismCore(timeoutMs = 20000): Promise<void> {
         reject(new Error("Cubism core did not load"));
         return;
       }
-      requestAnimationFrame(tick);
+      setTimeout(tick, 50);
     };
     tick();
   });

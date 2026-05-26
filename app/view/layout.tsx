@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import "../glasses.css";
 
 export const metadata: Metadata = {
   title: "TomoView",
@@ -20,5 +19,11 @@ export default function ViewLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <>
+      {/* Static CSS only — avoids Next preloading unrelated app chunks on /view */}
+      <link rel="stylesheet" href="/glasses.css" />
+      {children}
+    </>
+  );
 }
