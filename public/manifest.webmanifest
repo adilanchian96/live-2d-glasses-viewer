@@ -1,0 +1,16 @@
+{
+  "name": "TomoView",
+  "short_name": "TomoView",
+  "description": "A cute companion for Meta Ray-Ban Display glasses",
+  "start_url": "/view",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#e879a9",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

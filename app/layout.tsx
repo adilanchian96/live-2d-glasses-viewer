@@ -2,20 +2,18 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "OpenClaw Live2D — Glasses",
-  description: "Live2D avatar for Meta Ray-Ban Display glasses",
+  title: "TomoView — A friend on your Meta glasses",
+  description:
+    "Set up TomoView on Meta Ray-Ban Display glasses. A cute animated companion that lives in your view.",
+  manifest: "/manifest.webmanifest",
   icons: {
     icon: [{ url: "/favicon.ico" }],
   },
 };
 
-/** Meta Ray-Ban Display: fixed 600×600 additive waveguide viewport. */
 export const viewport: Viewport = {
-  width: 600,
-  height: 600,
+  width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export default function RootLayout({

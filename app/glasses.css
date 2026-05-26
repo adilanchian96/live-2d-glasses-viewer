@@ -1,0 +1,28 @@
+/* Meta Ray-Ban Display: black = transparent on additive waveguide */
+html:has(.glasses-app),
+html:has(.glasses-app) body {
+  margin: 0;
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+  background: #000;
+  color: #e8e8e8;
+}
+
+.glasses-app {
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+  background: #000;
+}
+
+.avatar-host {
+  width: 600px;
+  height: 600px;
+}
+
+.avatar-host canvas {
+  display: block;
+  width: 600px !important;
+  height: 600px !important;
+}
