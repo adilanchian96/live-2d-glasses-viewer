@@ -31,8 +31,8 @@ export default function LandingPage() {
         <p className="landing-kicker">For Meta Ray-Ban Display</p>
         <h1 className="landing-title">TomoView</h1>
         <p className="landing-tagline">
-          A cute companion on your glasses—reacts when you move your head and
-          keeps you company with gentle animations.
+          A cute companion on your glasses—keeps you company with gentle
+          animations.
         </p>
       </header>
 
@@ -88,7 +88,6 @@ export default function LandingPage() {
         <h2 className="section-title">What you&apos;ll see</h2>
         <ul className="about-list">
           <li>A friendly animated character in the corner of your view</li>
-          <li>Eyes and head that follow how you move</li>
           <li>Soft, looping animations—no typing or buttons needed</li>
         </ul>
       </section>

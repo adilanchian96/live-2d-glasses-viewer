@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { attachImuFocus } from "@/lib/imu-focus";
 import { parseModel3Json, type MotionEntry } from "@/lib/model-parser";
 import { resolveModelFromSearch } from "@/lib/models";
 
@@ -94,8 +93,6 @@ export default function GlassesAvatar() {
       model.anchor.set(0.5);
       app.stage.addChild(model);
 
-      const stopImuFocus = await attachImuFocus(model, { viewportSize: VIEWPORT });
-
       const modelJsonRes = await fetch(modelUrl);
       const modelJson = await modelJsonRes.json();
       const { motionMap } = parseModel3Json(modelJson);
@@ -141,7 +138,6 @@ export default function GlassesAvatar() {
 
       cleanupRef.current = () => {
         if (motionTimer) clearTimeout(motionTimer);
-        stopImuFocus();
         app.destroy(true, { children: true });
         host.replaceChildren();
       };

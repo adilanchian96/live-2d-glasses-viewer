@@ -10,7 +10,6 @@ import {
 } from "untitled-pixi-live2d-engine/cubism";
 
 extensions.add(Live2DPlugin);
-import { attachImuFocus } from "../../lib/imu-focus";
 import { parseModel3Json, type MotionEntry } from "../../lib/model-parser";
 import { resolveModelFromSearch } from "../../lib/models";
 
@@ -126,8 +125,6 @@ async function main(): Promise<void> {
   model.anchor.set(0.5);
   app.stage.addChild(model);
 
-  const stopImuFocus = await attachImuFocus(model, { viewportSize: VIEWPORT });
-
   const modelJsonRes = await fetch(modelUrl);
   const modelJson = await modelJsonRes.json();
   const { motionMap } = parseModel3Json(modelJson);
@@ -175,7 +172,6 @@ async function main(): Promise<void> {
 
   window.addEventListener("beforeunload", () => {
     if (motionTimer) clearTimeout(motionTimer);
-    stopImuFocus();
     app.destroy(true, { children: true });
   });
 }

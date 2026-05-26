@@ -49,7 +49,6 @@ const sections = [
       "Confirm the link ends with /view (https://tomoview.vercel.app/view).",
       "Make sure your phone and glasses are connected in the Meta AI app.",
       "Try removing the web app and adding the link again.",
-      "If the character’s eyes don’t follow your head, your phone may need to allow motion access for the page—open the link once in your phone browser and allow motion if asked.",
     ],
   },
   {
