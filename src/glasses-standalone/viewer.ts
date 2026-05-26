@@ -2,8 +2,14 @@
  * Standalone glasses viewer (no React). Bundled to public/glasses-viewer.js
  * for Meta Ray-Ban Display WebView compatibility.
  */
-import { Application } from "pixi.js";
-import { Live2DModel, MotionPriority } from "untitled-pixi-live2d-engine/cubism";
+import { Application, extensions } from "pixi.js";
+import {
+  Live2DModel,
+  Live2DPlugin,
+  MotionPriority,
+} from "untitled-pixi-live2d-engine/cubism";
+
+extensions.add(Live2DPlugin);
 import { attachImuFocus } from "../../lib/imu-focus";
 import { parseModel3Json, type MotionEntry } from "../../lib/model-parser";
 import { resolveModelFromSearch } from "../../lib/models";

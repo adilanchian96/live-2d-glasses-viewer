@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: "TomoView",
   description:
     "A cute companion for Meta Ray-Ban Display glasses.",
-  manifest: "/manifest.webmanifest",
   icons: {
     icon: [{ url: "/favicon.ico" }],
   },

@@ -9,6 +9,9 @@
     return document.getElementById("glasses-status");
   }
 
+  var initial = statusEl();
+  if (initial) initial.textContent = "Loading TomoView…";
+
   function fail(message) {
     var el = statusEl();
     if (el) {

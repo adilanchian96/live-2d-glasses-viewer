@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "TomoView — A friend on your Meta glasses",
   description:
     "Set up TomoView on Meta Ray-Ban Display glasses. A cute animated companion that lives in your view.",
+  manifest: "/manifest.webmanifest",
 };
 
 export const viewport: Viewport = {
