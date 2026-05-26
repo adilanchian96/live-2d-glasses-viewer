@@ -19,10 +19,10 @@ const sections = [
   {
     title: "Add TomoView to your glasses",
     items: [
-      "In Meta AI, go to Devices → your Display glasses → Display glasses settings.",
-      "Open App connections → Web apps.",
-      "Tap Add a web app (or similar).",
-      "Paste the TomoView link shown on this page (or scan the QR code, then copy the link if needed).",
+      "Easiest: scan the QR code on this page with your phone camera. Meta AI should open and walk you through adding TomoView.",
+      "On iPhone, tap the banner after scanning; on Android, choose to open with Meta AI if asked.",
+      "If the QR code does nothing, make sure the Meta AI app is installed and updated.",
+      "Manual option: Meta AI → Devices → your Display glasses → Web apps → Add. Name: TomoView. Paste the https link from this page.",
       "Save, then open TomoView from your glasses menu.",
     ],
   },

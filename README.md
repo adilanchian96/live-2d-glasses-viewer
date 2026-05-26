@@ -37,7 +37,9 @@ HTTPS locally: `npx next dev --experimental-https -H 0.0.0.0`
 
 ## Deploy
 
-Deploy to Vercel (or any HTTPS host). Set `NEXT_PUBLIC_SITE_URL` to your production URL. Users add **`https://your-domain/view`** in Meta AI → Web apps.
+Deploy to Vercel (or any HTTPS host). Set `NEXT_PUBLIC_SITE_URL` to your production URL.
+
+**Add on glasses:** Scan the landing page QR code (Meta AI deeplink `fb-viewapp://web_app_deep_link?...`) or manually paste **`https://your-domain/view`** in Meta AI → Web apps.
 
 ## Meta glasses
 

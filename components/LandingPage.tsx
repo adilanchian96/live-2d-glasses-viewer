@@ -7,13 +7,13 @@ import { getViewerUrl } from "@/lib/site-url";
 const steps = [
   {
     n: "1",
-    title: "Get the link",
-    body: "Scan the QR code or copy the TomoView link below.",
+    title: "Scan the code",
+    body: "Use your phone camera on the QR code. Meta AI should open by itself.",
   },
   {
     n: "2",
-    title: "Add it in Meta AI",
-    body: "In the Meta AI app, add the link as a Web app for your Display glasses.",
+    title: "Confirm in Meta AI",
+    body: "Follow the prompts to add TomoView to your Display glasses.",
   },
   {
     n: "3",
@@ -63,11 +63,20 @@ export default function LandingPage() {
         <div className="connect-grid">
           <TomoQrCode />
           <div className="connect-details">
-            <CopyViewerLink url={viewerUrl} />
-            <p className="connect-hint">
-              Paste this link in Meta AI under your glasses → Web apps. The
-              glasses will show your character—not this setup page.
+            <p className="connect-lead">
+              The QR code is the easiest way—it opens Meta AI and adds TomoView
+              for you.
             </p>
+            <details className="manual-add">
+              <summary>Prefer to add the link yourself?</summary>
+              <div className="manual-add-body">
+                <CopyViewerLink url={viewerUrl} />
+                <p className="connect-hint">
+                  In Meta AI: Devices → your glasses → Web apps → Add. Name it{" "}
+                  <strong>TomoView</strong> and paste this link.
+                </p>
+              </div>
+            </details>
             <Link href="/view" className="btn-primary">
               Preview the character
             </Link>
