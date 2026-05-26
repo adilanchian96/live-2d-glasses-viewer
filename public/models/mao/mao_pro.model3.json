@@ -1,0 +1,105 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "mao_pro.moc3",
+		"Textures": [
+			"mao_pro.4096/texture_00.png"
+		],
+		"Physics": "mao_pro.physics3.json",
+		"Pose": "mao_pro.pose3.json",
+		"DisplayInfo": "mao_pro.cdi3.json",
+		"Expressions": [
+			{
+				"Name": "Neutral",
+				"File": "expressions/exp_01.exp3.json"
+			},
+			{
+				"Name": "Happy",
+				"File": "expressions/exp_02.exp3.json"
+			},
+			{
+				"Name": "Smug",
+				"File": "expressions/exp_03.exp3.json"
+			},
+			{
+				"Name": "Excited",
+				"File": "expressions/exp_04.exp3.json"
+			},
+			{
+				"Name": "Sad/Concerned/Disappointed",
+				"File": "expressions/exp_05.exp3.json"
+			},
+			{
+				"Name": "Embarassed/Shy",
+				"File": "expressions/exp_06.exp3.json"
+			},
+			{
+				"Name": "Shocked/Surprised",
+				"File": "expressions/exp_07.exp3.json"
+			},
+			{
+				"Name": "Angry/Annoyed/Frustrated",
+				"File": "expressions/exp_08.exp3.json"
+			}
+		],
+		"Motions": {
+			"Idle": [
+				{
+					"File": "motions/mtn_01.motion3.json"
+				}
+			],
+			"": [
+				{
+					"File": "motions/mtn_02.motion3.json"
+				},
+				{
+					"Name": "Embarassed/Shy",
+					"File": "motions/mtn_03.motion3.json"
+				},
+				{
+					"Name": "Confident/Proud/Ready to go",
+					"File": "motions/mtn_04.motion3.json"
+				},
+				{
+					"Name": "Magic trick performed and succeeded",
+					"File": "motions/special_01.motion3.json"
+				},
+				{
+					"Name": "Magic trick performed and failed",
+					"File": "motions/special_02.motion3.json"
+				},
+				{
+					"Name": "Wink with a successful magical power up",
+					"File": "motions/special_03.motion3.json"
+				}
+			]
+		}
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamA"
+			]
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "HitAreaHead",
+			"Name": ""
+		},
+		{
+			"Id": "HitAreaBody",
+			"Name": ""
+		}
+	]
+}
