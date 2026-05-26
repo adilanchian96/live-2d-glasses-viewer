@@ -1,13 +1,18 @@
-import Script from "next/script";
-import GlassesAvatar from "@/components/GlassesAvatar";
-
+/**
+ * Glasses route: minimal HTML + pre-bundled JS (no React).
+ * Meta Display WebView handles this better than a client component + dynamic imports.
+ */
 export default function ViewerPage() {
   return (
     <>
-      <Script src="/live2dcubismcore.min.js" strategy="beforeInteractive" />
+      <div id="glasses-status" className="glasses-status">
+        Loading TomoView…
+      </div>
       <main className="glasses-app" aria-label="TomoView avatar">
-        <GlassesAvatar />
+        <div id="avatar-host" className="avatar-host" />
       </main>
+      <script src="/live2dcubismcore.min.js" />
+      <script type="module" src="/glasses-viewer.js" />
     </>
   );
 }

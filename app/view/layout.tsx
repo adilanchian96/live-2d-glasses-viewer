@@ -1,5 +1,10 @@
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import "../glasses.css";
+
+export const metadata: Metadata = {
+  title: "TomoView",
+  description: "TomoView avatar for Meta Ray-Ban Display",
+};
 
 /** Meta Ray-Ban Display: fixed 600×600 additive waveguide viewport. */
 export const viewport: Viewport = {

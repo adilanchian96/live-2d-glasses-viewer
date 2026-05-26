@@ -35,9 +35,18 @@ const sections = [
     ],
   },
   {
+    title: "Works in Chrome but not on glasses?",
+    items: [
+      "Use the exact viewer link: https://tomoview.vercel.app/view — not the home page.",
+      "Remove the old web app in Meta AI and add again using the QR code on tomoview.vercel.app.",
+      "Wait a few seconds on first launch—you may briefly see pink “Loading TomoView…” text.",
+      "If you see an error message on the glasses, redeploy TomoView and reload the web app.",
+    ],
+  },
+  {
     title: "Avatar not showing or not moving?",
     items: [
-      "Confirm the exact link ends with /view (for example https://yoursite.com/view).",
+      "Confirm the link ends with /view (https://tomoview.vercel.app/view).",
       "Make sure your phone and glasses are connected in the Meta AI app.",
       "Try removing the web app and adding the link again.",
       "If the character’s eyes don’t follow your head, your phone may need to allow motion access for the page—open the link once in your phone browser and allow motion if asked.",
