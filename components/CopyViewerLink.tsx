@@ -23,7 +23,7 @@ export default function CopyViewerLink({ url }: CopyViewerLinkProps) {
     <div className="link-copy-block">
       <p className="link-copy-label">Link for Meta AI → Web apps</p>
       <div className="link-copy-row">
-        <code className="link-copy-url">https://tomoview.vercel.app</code>
+        <code className="link-copy-url">{url}</code>
         <button type="button" className="btn-secondary" onClick={copy}>
           {copied ? "Copied!" : "Copy"}
         </button>

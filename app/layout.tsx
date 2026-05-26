@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { TOMOVIEW_SITE_URL } from "@/lib/site-url";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(TOMOVIEW_SITE_URL),
   title: "TomoView — A friend on your Meta glasses",
   description:
     "Set up TomoView on Meta Ray-Ban Display glasses. A cute animated companion that lives in your view.",

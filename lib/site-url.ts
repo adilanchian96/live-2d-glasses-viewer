@@ -1,15 +1,14 @@
 const DEFAULT_APP_NAME = "TomoView";
 
-/** Public HTTPS origin (set in production). */
+/** Canonical production origin for TomoView. */
+export const TOMOVIEW_SITE_URL = "https://tomoview.vercel.app";
+
+/** Public HTTPS origin for QR codes, deeplinks, and copy-paste. */
 export function getSiteUrl(): string {
   const configured = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
   if (configured) return configured;
 
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
-  }
-
-  return "http://localhost:3000";
+  return TOMOVIEW_SITE_URL;
 }
 
 /** Display name shown when adding the web app in Meta AI. */
