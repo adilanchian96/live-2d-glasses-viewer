@@ -23,8 +23,9 @@ body {
 
 .avatar-host canvas {
   display: block;
-  width: 600px !important;
-  height: 600px !important;
+  /* autoDensity sets size; keep 600×600 logical viewport for MRBD */
+  width: 600px;
+  height: 600px;
 }
 
 .glasses-status {

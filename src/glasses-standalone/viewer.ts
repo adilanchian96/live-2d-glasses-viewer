@@ -68,13 +68,21 @@ function pickRandomMotion(
   return motionMap[id] ?? null;
 }
 
+function getRenderResolution(): number {
+  // 2× backing store → sharper on waveguide / high-DPI WebViews (still displayed at 600×600 CSS)
+  const dpr = typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
+  return Math.min(Math.max(dpr, 2), 2);
+}
+
 async function createPixiApp(): Promise<Application> {
+  const resolution = getRenderResolution();
   const base = {
     width: VIEWPORT,
     height: VIEWPORT,
     backgroundAlpha: 0,
-    resolution: 1,
-    antialias: false,
+    resolution,
+    autoDensity: true,
+    antialias: true,
   };
 
   for (const preference of ["webgl", "webgpu"] as const) {
@@ -134,7 +142,11 @@ async function main(): Promise<void> {
     const scaleY = modelH > 0 ? maxH / modelH : 0.5;
     const scale = Math.min(scaleX, scaleY);
     model.scale.set(scale);
-    model.position.set(VIEWPORT / 2, VIEWPORT / 2);
+    // Whole-pixel center reduces soft edges when scaled
+    model.position.set(
+      Math.round(VIEWPORT / 2),
+      Math.round(VIEWPORT / 2),
+    );
   };
 
   await new Promise((r) => setTimeout(r, 100));
